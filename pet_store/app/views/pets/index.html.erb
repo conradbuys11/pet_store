@@ -1,8 +1,8 @@
-<h1>List of all Pets</h1>
+<h1>List of all <%= @header_name %></h1>
 <ul>
 <% @pets.each do |pet| %>
     <li> <%= link_to(pet[:name], pet_path(pet)) %> </li>
     <% end %>
 </ul>
-<div><%= link_to("See all cats", species_path("Cat")) %></div>
+
 <div><%= link_to("Back to homepage", "/") %></div>

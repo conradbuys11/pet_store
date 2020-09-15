@@ -1248,3 +1248,664 @@ ActionView::Template::Error (SQLite3::SQLException: no such column: Cat):
     6: </ul>
   
 app/views/pets/by_species.html.erb:3
+Started GET "/pets/categories/species" for ::1 at 2020-09-15 16:26:22 -0400
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PetsController#by_species as HTML
+  Parameters: {"species"=>"species"}
+  Rendering pets/by_species.html.erb within layouts/application
+  [1m[36mPet Load (0.5ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE (species = species)[0m
+  ↳ app/views/pets/by_species.html.erb:3
+  Rendered pets/by_species.html.erb within layouts/application (Duration: 13.2ms | Allocations: 6255)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 77ms (Views: 63.4ms | ActiveRecord: 2.1ms | Allocations: 13792)
+
+
+Started GET "/pets/categories/Cat" for ::1 at 2020-09-15 16:26:28 -0400
+Processing by PetsController#by_species as HTML
+  Parameters: {"species"=>"Cat"}
+  Rendering pets/by_species.html.erb within layouts/application
+  [1m[36mPet Load (1.4ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE (species = Cat)[0m
+  ↳ app/views/pets/by_species.html.erb:3
+  Rendered pets/by_species.html.erb within layouts/application (Duration: 4.1ms | Allocations: 2360)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 1.4ms | Allocations: 2821)
+
+
+  
+ActionView::Template::Error (SQLite3::SQLException: no such column: Cat):
+    1: <h1>List of All <%= @species_capitalized %></h1>
+    2: <ul>
+    3: <% @all_of_species.each do |animal| %>
+    4:     <li><%= animal.name %></li>
+    5:     <% end %>
+    6: </ul>
+  
+app/views/pets/by_species.html.erb:3
+Started GET "/pets/categories/species" for ::1 at 2020-09-15 16:26:33 -0400
+Processing by PetsController#by_species as HTML
+  Parameters: {"species"=>"species"}
+  Rendering pets/by_species.html.erb within layouts/application
+  [1m[36mPet Load (0.3ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE (species = species)[0m
+  ↳ app/views/pets/by_species.html.erb:3
+  Rendered pets/by_species.html.erb within layouts/application (Duration: 2.0ms | Allocations: 761)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 30ms (Views: 28.6ms | ActiveRecord: 0.3ms | Allocations: 4648)
+
+
+Started GET "/pets/categories/cat" for ::1 at 2020-09-15 16:26:55 -0400
+Processing by PetsController#by_species as HTML
+  Parameters: {"species"=>"cat"}
+  Rendering pets/by_species.html.erb within layouts/application
+  [1m[36mPet Load (0.8ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE (species = cat)[0m
+  ↳ app/views/pets/by_species.html.erb:3
+  Rendered pets/by_species.html.erb within layouts/application (Duration: 2.4ms | Allocations: 2045)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.8ms | Allocations: 2513)
+
+
+  
+ActionView::Template::Error (SQLite3::SQLException: no such column: cat):
+    1: <h1>List of All <%= @species_capitalized %></h1>
+    2: <ul>
+    3: <% @all_of_species.each do |animal| %>
+    4:     <li><%= animal.name %></li>
+    5:     <% end %>
+    6: </ul>
+  
+app/views/pets/by_species.html.erb:3
+Started GET "/pets/categories/Dog" for ::1 at 2020-09-15 16:27:11 -0400
+Processing by PetsController#by_species as HTML
+  Parameters: {"species"=>"Dog"}
+  Rendering pets/by_species.html.erb within layouts/application
+  [1m[36mPet Load (9.8ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE (species = Dog)[0m
+  ↳ app/views/pets/by_species.html.erb:3
+  Rendered pets/by_species.html.erb within layouts/application (Duration: 11.7ms | Allocations: 2044)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 9.8ms | Allocations: 2511)
+
+
+  
+ActionView::Template::Error (SQLite3::SQLException: no such column: Dog):
+    1: <h1>List of All <%= @species_capitalized %></h1>
+    2: <ul>
+    3: <% @all_of_species.each do |animal| %>
+    4:     <li><%= animal.name %></li>
+    5:     <% end %>
+    6: </ul>
+  
+app/views/pets/by_species.html.erb:3
+Started GET "/" for ::1 at 2020-09-15 16:28:02 -0400
+Processing by PetsController#homepage as HTML
+  Rendering pets/homepage.html.erb within layouts/application
+  Rendered pets/homepage.html.erb within layouts/application (Duration: 0.9ms | Allocations: 154)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 11.8ms | ActiveRecord: 0.0ms | Allocations: 3711)
+
+
+Started GET "/pets" for ::1 at 2020-09-15 16:28:03 -0400
+Processing by PetsController#index as HTML
+  Rendering pets/index.html.erb within layouts/application
+  [1m[36mPet Load (0.4ms)[0m  [1m[34mSELECT "pets".* FROM "pets"[0m
+  ↳ app/views/pets/index.html.erb:3
+  Rendered pets/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1171)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 25ms (Views: 23.9ms | ActiveRecord: 0.4ms | Allocations: 5099)
+
+
+Started GET "/pets/categories/Cat" for ::1 at 2020-09-15 16:28:05 -0400
+Processing by PetsController#by_species as HTML
+  Parameters: {"species"=>"Cat"}
+  Rendering pets/by_species.html.erb within layouts/application
+  [1m[36mPet Load (0.6ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE (species = Cat)[0m
+  ↳ app/views/pets/by_species.html.erb:3
+  Rendered pets/by_species.html.erb within layouts/application (Duration: 8.5ms | Allocations: 2035)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.6ms | Allocations: 2491)
+
+
+  
+ActionView::Template::Error (SQLite3::SQLException: no such column: Cat):
+    1: <h1>List of All <%= @species_capitalized %></h1>
+    2: <ul>
+    3: <% @all_of_species.each do |animal| %>
+    4:     <li><%= animal.name %></li>
+    5:     <% end %>
+    6: </ul>
+  
+app/views/pets/by_species.html.erb:3
+Started GET "/pets" for ::1 at 2020-09-15 16:28:07 -0400
+Processing by PetsController#index as HTML
+  Rendering pets/index.html.erb within layouts/application
+  [1m[36mPet Load (0.3ms)[0m  [1m[34mSELECT "pets".* FROM "pets"[0m
+  ↳ app/views/pets/index.html.erb:3
+  Rendered pets/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 956)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 10.2ms | ActiveRecord: 0.3ms | Allocations: 4370)
+
+
+Started GET "/pets/categories/Cat" for ::1 at 2020-09-15 16:28:09 -0400
+Processing by PetsController#by_species as HTML
+  Parameters: {"species"=>"Cat"}
+  Rendering pets/by_species.html.erb within layouts/application
+  [1m[36mPet Load (0.8ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE (species = Cat)[0m
+  ↳ app/views/pets/by_species.html.erb:3
+  Rendered pets/by_species.html.erb within layouts/application (Duration: 2.2ms | Allocations: 2035)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.8ms | Allocations: 2485)
+
+
+  
+ActionView::Template::Error (SQLite3::SQLException: no such column: Cat):
+    1: <h1>List of All <%= @species_capitalized %></h1>
+    2: <ul>
+    3: <% @all_of_species.each do |animal| %>
+    4:     <li><%= animal.name %></li>
+    5:     <% end %>
+    6: </ul>
+  
+app/views/pets/by_species.html.erb:3
+Started GET "/pets/cats" for ::1 at 2020-09-15 16:48:35 -0400
+  
+SyntaxError (/mnt/c/Users/Conrad/dev/flatiron/labs/pet_store/pet_store/config/routes.rb:8: syntax error, unexpected tIDENTIFIER, expecting end
+  get '/pets/dogs' to: 'pets#dogs', as: 'pet' #rai...
+                   ^~):
+  
+config/routes.rb:8: syntax error, unexpected tIDENTIFIER, expecting end
+config/routes.rb:8: syntax error, unexpected tIDENTIFIER, expecting end
+config/routes.rb:8: syntax error, unexpected tIDENTIFIER, expecting end
+Started GET "/pets/dogs" for ::1 at 2020-09-15 16:49:04 -0400
+  
+ArgumentError (Invalid route name, already in use: 'pet' 
+You may have defined two routes with the same name using the `:as` option, or you may be overriding a route already defined by a resource with the same naming. For the latter, you can restrict the routes created with `resources` as explained here: 
+https://guides.rubyonrails.org/routing.html#restricting-the-routes-created):
+  
+config/routes.rb:8:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/pets/dogs" for ::1 at 2020-09-15 16:49:31 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PetsController#show as HTML
+  Parameters: {"id"=>"dogs"}
+  [1m[36mPet Load (0.4ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/pets_controller.rb:13:in `show'
+Completed 404 Not Found in 19ms (ActiveRecord: 0.4ms | Allocations: 2160)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Pet with 'id'=dogs):
+  
+app/controllers/pets_controller.rb:13:in `show'
+Started GET "/dogs" for ::1 at 2020-09-15 16:50:23 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PetsController#dogs as HTML
+  Rendering pets/by_species.html.erb within layouts/application
+  [1m[36mPet Load (0.6ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE (species = Dog)[0m
+  ↳ app/views/pets/by_species.html.erb:3
+  Rendered pets/by_species.html.erb within layouts/application (Duration: 2.2ms | Allocations: 2128)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.6ms | Allocations: 3634)
+
+
+  
+ActionView::Template::Error (SQLite3::SQLException: no such column: Dog):
+    1: <!-- <h1>List of All <%= @species_capitalized %></h1>
+    2: <ul>
+    3: <% @all_of_species.each do |animal| %> #Comment here
+    4:     <li><%= animal.name %></li>
+    5:     <% end %>
+    6: </ul> -->
+  
+app/views/pets/by_species.html.erb:3
+app/controllers/pets_controller.rb:28:in `dogs'
+Started GET "/dogs" for ::1 at 2020-09-15 16:51:12 -0400
+Processing by PetsController#dogs as HTML
+  Rendering pets/by_species.html.erb within layouts/application
+  Rendered pets/by_species.html.erb within layouts/application (Duration: 0.3ms | Allocations: 71)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 17.4ms | ActiveRecord: 0.0ms | Allocations: 4504)
+
+
+Started GET "/" for ::1 at 2020-09-15 17:00:40 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PetsController#homepage as HTML
+  Rendering pets/homepage.html.erb within layouts/application
+  Rendered pets/homepage.html.erb within layouts/application (Duration: 0.7ms | Allocations: 143)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 19ms (Views: 16.6ms | ActiveRecord: 0.0ms | Allocations: 4590)
+
+
+Started GET "/pets" for ::1 at 2020-09-15 17:00:41 -0400
+Processing by PetsController#index as HTML
+  Rendering pets/index.html.erb within layouts/application
+  [1m[36mPet Load (0.4ms)[0m  [1m[34mSELECT "pets".* FROM "pets"[0m
+  ↳ app/views/pets/index.html.erb:3
+  Rendered pets/index.html.erb within layouts/application (Duration: 167.9ms | Allocations: 82262)
+Completed 500 Internal Server Error in 171ms (ActiveRecord: 1.9ms | Allocations: 83147)
+
+
+  
+ActionView::Template::Error (undefined method `species_path' for #<#<Class:0x00007fffcd818830>:0x00007fbc4c348e28>):
+    4:     <li> <%= link_to(pet[:name], pet_path(pet)) %> </li>
+    5:     <% end %>
+    6: </ul>
+    7: <div><%= link_to("See all cats", species_path("Cat")) %></div>
+    8: <div><%= link_to("Back to homepage", "/") %></div>
+  
+app/views/pets/index.html.erb:7
+app/controllers/pets_controller.rb:8:in `index'
+Started GET "/pets" for ::1 at 2020-09-15 17:01:03 -0400
+Processing by PetsController#index as HTML
+  Rendering pets/index.html.erb within layouts/application
+  [1m[36mPet Load (0.2ms)[0m  [1m[34mSELECT "pets".* FROM "pets"[0m
+  ↳ app/views/pets/index.html.erb:3
+  Rendered pets/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1092)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 14.3ms | ActiveRecord: 0.2ms | Allocations: 5460)
+
+
+Started GET "/dogs" for ::1 at 2020-09-15 17:01:10 -0400
+Processing by PetsController#dogs as HTML
+  Rendering pets/index.html.erb within layouts/application
+  [1m[36mPet Load (0.7ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE (species = Dog)[0m
+  ↳ app/views/pets/index.html.erb:3
+  Rendered pets/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 2015)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.7ms | Allocations: 2431)
+
+
+  
+ActionView::Template::Error (SQLite3::SQLException: no such column: Dog):
+    1: <h1>List of all Pets</h1>
+    2: <ul>
+    3: <% @pets.each do |pet| %>
+    4:     <li> <%= link_to(pet[:name], pet_path(pet)) %> </li>
+    5:     <% end %>
+    6: </ul>
+  
+app/views/pets/index.html.erb:3
+app/controllers/pets_controller.rb:28:in `dogs'
+Started GET "/dogs" for ::1 at 2020-09-15 17:03:14 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PetsController#dogs as HTML
+  Rendering pets/index.html.erb within layouts/application
+  [1m[36mPet Load (0.3ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE (species = 'Dog')[0m
+  ↳ app/views/pets/index.html.erb:3
+  Rendered pets/index.html.erb within layouts/application (Duration: 8.7ms | Allocations: 5749)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 26ms (Views: 22.7ms | ActiveRecord: 1.2ms | Allocations: 9598)
+
+
+Started GET "/dogs" for ::1 at 2020-09-15 17:25:32 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PetsController#index as HTML
+  Parameters: {"species"=>"dogs"}
+Completed 500 Internal Server Error in 213ms (ActiveRecord: 0.0ms | Allocations: 97772)
+
+
+  
+NameError (undefined local variable or method `species' for #<PetsController:0x00007fbc4cc9d5f0>):
+  
+app/controllers/pets_controller.rb:9:in `index'
+Started GET "/pets" for ::1 at 2020-09-15 17:25:45 -0400
+Processing by PetsController#index as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 949)
+
+
+  
+NoMethodError (undefined method `downcase' for nil:NilClass):
+  
+app/controllers/pets_controller.rb:8:in `index'
+Started GET "/pets" for ::1 at 2020-09-15 17:26:59 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PetsController#index as HTML
+  Parameters: {"species"=>"pets"}
+Completed 500 Internal Server Error in 205ms (ActiveRecord: 0.0ms | Allocations: 97754)
+
+
+  
+NameError (undefined local variable or method `species' for #<PetsController:0x00007fbc4cd18ac0>):
+  
+app/controllers/pets_controller.rb:9:in `index'
+Started GET "/pets" for ::1 at 2020-09-15 17:27:24 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PetsController#index as HTML
+  Parameters: {"species"=>"pets"}
+  Rendering pets/index.html.erb within layouts/application
+  Rendered pets/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 1032)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms | Allocations: 2538)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>List of all Pets</h1>
+<ul>
+<% @pets.each do |pet| %>
+    <li> <%= link_to(pet[:name], pet_path(pet)) %> </li>
+    <% end %>
+</ul>
+<div><%= link_to("List of all pets", "/pets")</div>
+<div><%= link_to("List of all dogs", "/dogs")</div>
+<div><%= link_to("List of all cats", "/cats")</div>
+<div><%= link_to("Back to homepage", "/") %></div>
+):
+1:    <h1>List of all Pets</h1>
+2:    <ul>
+3:    <% @pets.each do |pet| %>
+4:        <li> <%= link_to(pet[:name], pet_path(pet)) %> </li>
+5:        <% end %>
+6:    </ul>
+7:    <div><%= link_to("List of all pets", "/pets")</div>
+8:    <div><%= link_to("List of all dogs", "/dogs")</div>
+9:    <div><%= link_to("List of all cats", "/cats")</div>
+10:    <div><%= link_to("Back to homepage", "/") %></div>
+  
+app/views/pets/index.html.erb:8: unknown regexp options - dg
+app/views/pets/index.html.erb:8: end pattern with unmatched parenthesis: /div>
+app/views/pets/index.html.erb:8: syntax error, unexpected tSTRING_BEG, expecting ')'
+app/views/pets/index.html.erb:9: syntax error, unexpected tCONSTANT, expecting ')'
+app/views/pets/index.html.erb:9: syntax error, unexpected tSTRING_BEG, expecting do or '{' or '('
+app/views/pets/index.html.erb:10: syntax error, unexpected tCONSTANT, expecting ')'
+app/views/pets/index.html.erb:12: unterminated string meets end of file
+app/views/pets/index.html.erb:12: syntax error, unexpected end-of-input, expecting ')'
+app/views/pets/index.html.erb:8: unknown regexp options - dg
+app/views/pets/index.html.erb:8: end pattern with unmatched parenthesis: /div>
+app/views/pets/index.html.erb:8: syntax error, unexpected tSTRING_BEG, expecting ')'
+app/views/pets/index.html.erb:9: syntax error, unexpected tCONSTANT, expecting ')'
+app/views/pets/index.html.erb:9: syntax error, unexpected tSTRING_BEG, expecting do or '{' or '('
+app/views/pets/index.html.erb:10: syntax error, unexpected tCONSTANT, expecting ')'
+app/views/pets/index.html.erb:12: unterminated string meets end of file
+app/views/pets/index.html.erb:12: syntax error, unexpected end-of-input, expecting ')'
+app/views/pets/index.html.erb:8: unknown regexp options - dg
+app/views/pets/index.html.erb:8: end pattern with unmatched parenthesis: /div>
+app/views/pets/index.html.erb:8: syntax error, unexpected tSTRING_BEG, expecting ')'
+app/views/pets/index.html.erb:9: syntax error, unexpected tCONSTANT, expecting ')'
+app/views/pets/index.html.erb:9: syntax error, unexpected tSTRING_BEG, expecting do or '{' or '('
+app/views/pets/index.html.erb:10: syntax error, unexpected tCONSTANT, expecting ')'
+app/views/pets/index.html.erb:12: unterminated string meets end of file
+app/views/pets/index.html.erb:12: syntax error, unexpected end-of-input, expecting ')'
+app/views/pets/index.html.erb:8: unknown regexp options - dg
+app/views/pets/index.html.erb:8: end pattern with unmatched parenthesis: /div>
+app/views/pets/index.html.erb:8: syntax error, unexpected tSTRING_BEG, expecting ')'
+app/views/pets/index.html.erb:9: syntax error, unexpected tCONSTANT, expecting ')'
+app/views/pets/index.html.erb:9: syntax error, unexpected tSTRING_BEG, expecting do or '{' or '('
+app/views/pets/index.html.erb:10: syntax error, unexpected tCONSTANT, expecting ')'
+app/views/pets/index.html.erb:12: unterminated string meets end of file
+app/views/pets/index.html.erb:12: syntax error, unexpected end-of-input, expecting ')'
+app/views/pets/index.html.erb:8: unknown regexp options - dg
+app/views/pets/index.html.erb:8: end pattern with unmatched parenthesis: /div>
+app/views/pets/index.html.erb:8: syntax error, unexpected tSTRING_BEG, expecting ')'
+app/views/pets/index.html.erb:9: syntax error, unexpected tCONSTANT, expecting ')'
+app/views/pets/index.html.erb:9: syntax error, unexpected tSTRING_BEG, expecting do or '{' or '('
+app/views/pets/index.html.erb:10: syntax error, unexpected tCONSTANT, expecting ')'
+app/views/pets/index.html.erb:12: unterminated string meets end of file
+app/views/pets/index.html.erb:12: syntax error, unexpected end-of-input, expecting ')'
+app/views/pets/index.html.erb:8: unknown regexp options - dg
+app/views/pets/index.html.erb:8: end pattern with unmatched parenthesis: /div>
+app/views/pets/index.html.erb:8: syntax error, unexpected tSTRING_BEG, expecting ')'
+app/views/pets/index.html.erb:9: syntax error, unexpected tCONSTANT, expecting ')'
+app/views/pets/index.html.erb:9: syntax error, unexpected tSTRING_BEG, expecting do or '{' or '('
+app/views/pets/index.html.erb:10: syntax error, unexpected tCONSTANT, expecting ')'
+app/views/pets/index.html.erb:12: unterminated string meets end of file
+app/views/pets/index.html.erb:12: syntax error, unexpected end-of-input, expecting ')'
+app/controllers/pets_controller.rb:17:in `index'
+Started GET "/pets" for ::1 at 2020-09-15 17:28:08 -0400
+Processing by PetsController#index as HTML
+  Parameters: {"species"=>"pets"}
+  Rendering pets/index.html.erb within layouts/application
+  [1m[36mPet Load (0.7ms)[0m  [1m[34mSELECT "pets".* FROM "pets"[0m
+  ↳ app/views/pets/index.html.erb:3
+  Rendered pets/index.html.erb within layouts/application (Duration: 11.5ms | Allocations: 6097)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 24ms (Views: 20.8ms | ActiveRecord: 2.4ms | Allocations: 10491)
+
+
+Started GET "/pets/4" for ::1 at 2020-09-15 17:28:13 -0400
+Processing by PetsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPet Load (0.5ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/pets_controller.rb:22:in `show'
+Completed 404 Not Found in 3ms (ActiveRecord: 0.5ms | Allocations: 1208)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Pet with 'id'=4):
+  
+app/controllers/pets_controller.rb:22:in `show'
+Started GET "/pets/12" for ::1 at 2020-09-15 17:28:19 -0400
+Processing by PetsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mPet Load (0.6ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/pets_controller.rb:22:in `show'
+  Rendering pets/show.html.erb within layouts/application
+  Rendered pets/show.html.erb within layouts/application (Duration: 291.7ms | Allocations: 147361)
+Completed 500 Internal Server Error in 296ms (ActiveRecord: 0.6ms | Allocations: 148453)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `pets_path' for #<#<Class:0x00007fbc408b5cf0>:0x00007fbc4c3a4fe8>
+Did you mean?  pet_path):
+    2: <div><%= @pet.name %> the <%= @pet.species %></div>
+    3: <div>Age: <%= @pet.age %></div>
+    4: <div><%= @pet.kids_statement %></div>
+    5: <div><%= link_to("Back to index page", pets_path) %> </div>
+  
+app/views/pets/show.html.erb:5
+Started GET "/pets/12" for ::1 at 2020-09-15 17:28:35 -0400
+Processing by PetsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mPet Load (0.2ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/pets_controller.rb:22:in `show'
+  Rendering pets/show.html.erb within layouts/application
+  Rendered pets/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 170)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 34ms (Views: 32.0ms | ActiveRecord: 0.2ms | Allocations: 5522)
+
+
+Started GET "/pets" for ::1 at 2020-09-15 17:28:37 -0400
+Processing by PetsController#index as HTML
+  Parameters: {"species"=>"pets"}
+  Rendering pets/index.html.erb within layouts/application
+  [1m[36mPet Load (0.3ms)[0m  [1m[34mSELECT "pets".* FROM "pets"[0m
+  ↳ app/views/pets/index.html.erb:3
+  Rendered pets/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1094)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 10.9ms | ActiveRecord: 0.3ms | Allocations: 4627)
+
+
+Started GET "/pets/13" for ::1 at 2020-09-15 17:28:37 -0400
+Processing by PetsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mPet Load (0.4ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/pets_controller.rb:22:in `show'
+  Rendering pets/show.html.erb within layouts/application
+  Rendered pets/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 18)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 9.7ms | ActiveRecord: 0.4ms | Allocations: 3988)
+
+
+Started GET "/pets/12" for ::1 at 2020-09-15 17:28:40 -0400
+Processing by PetsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mPet Load (0.2ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/pets_controller.rb:22:in `show'
+  Rendering pets/show.html.erb within layouts/application
+  Rendered pets/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 18)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 9.0ms | ActiveRecord: 0.2ms | Allocations: 3963)
+
+
+Started GET "/pets/11" for ::1 at 2020-09-15 17:28:42 -0400
+Processing by PetsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mPet Load (0.4ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/pets_controller.rb:22:in `show'
+  Rendering pets/show.html.erb within layouts/application
+  Rendered pets/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 18)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 11.2ms | ActiveRecord: 0.4ms | Allocations: 3952)
+
+
+Started GET "/cats" for ::1 at 2020-09-15 17:28:57 -0400
+Processing by PetsController#index as HTML
+  Parameters: {"species"=>"cats"}
+  Rendering pets/index.html.erb within layouts/application
+  [1m[36mPet Load (0.6ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."species" = ?[0m  [["species", "cats"]]
+  ↳ app/views/pets/index.html.erb:3
+  Rendered pets/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 652)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 10.5ms | ActiveRecord: 0.6ms | Allocations: 4075)
+
+
+Started GET "/cats" for ::1 at 2020-09-15 17:32:51 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PetsController#index as HTML
+  Parameters: {"species"=>"cats"}
+  Rendering pets/index.html.erb within layouts/application
+  [1m[36mPet Load (0.3ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."species" = ?[0m  [["species", "Cat"]]
+  ↳ app/views/pets/index.html.erb:3
+  Rendered pets/index.html.erb within layouts/application (Duration: 10.6ms | Allocations: 5242)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 24ms (Views: 20.0ms | ActiveRecord: 1.6ms | Allocations: 9693)
+
+
+Started GET "/cats" for ::1 at 2020-09-15 17:34:33 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PetsController#index as HTML
+  Parameters: {"species"=>"cats"}
+  Rendering pets/index.html.erb within layouts/application
+  [1m[36mPet Load (0.2ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."species" = ?[0m  [["species", "Cat"]]
+  ↳ app/views/pets/index.html.erb:3
+  Rendered pets/index.html.erb within layouts/application (Duration: 9.8ms | Allocations: 5194)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 22ms (Views: 17.5ms | ActiveRecord: 1.6ms | Allocations: 9591)
+
+
+Started GET "/cats" for ::1 at 2020-09-15 17:34:59 -0400
+Processing by PetsController#index as HTML
+  Parameters: {"species"=>"cats"}
+  Rendering pets/index.html.erb within layouts/application
+  [1m[36mPet Load (0.2ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."species" = ?[0m  [["species", "Cat"]]
+  ↳ app/views/pets/index.html.erb:3
+  Rendered pets/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 933)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 13.3ms | ActiveRecord: 0.2ms | Allocations: 5360)
+
+
+Started GET "/dogs" for ::1 at 2020-09-15 17:35:02 -0400
+Processing by PetsController#index as HTML
+  Parameters: {"species"=>"dogs"}
+  Rendering pets/index.html.erb within layouts/application
+  [1m[36mPet Load (0.3ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."species" = ?[0m  [["species", "Dog"]]
+  ↳ app/views/pets/index.html.erb:3
+  Rendered pets/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 762)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 12.5ms | ActiveRecord: 0.3ms | Allocations: 4210)
+
+
+Started GET "/birds" for ::1 at 2020-09-15 17:35:04 -0400
+Processing by PetsController#index as HTML
+  Parameters: {"species"=>"birds"}
+  Rendering pets/index.html.erb within layouts/application
+  [1m[36mPet Load (0.3ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."species" = ?[0m  [["species", "Bird"]]
+  ↳ app/views/pets/index.html.erb:3
+  Rendered pets/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 718)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 19ms (Views: 17.4ms | ActiveRecord: 0.3ms | Allocations: 4185)
+
+
+Started GET "/pets" for ::1 at 2020-09-15 17:35:07 -0400
+Processing by PetsController#index as HTML
+  Parameters: {"species"=>"pets"}
+  Rendering pets/index.html.erb within layouts/application
+  [1m[36mPet Load (0.5ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."species" = ?[0m  [["species", "Pet"]]
+  ↳ app/views/pets/index.html.erb:3
+  Rendered pets/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 631)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 13.2ms | ActiveRecord: 0.5ms | Allocations: 4057)
+
+
+Started GET "/pets" for ::1 at 2020-09-15 17:36:01 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PetsController#index as HTML
+  Parameters: {"species"=>"pets"}
+  Rendering pets/index.html.erb within layouts/application
+  [1m[36mPet Load (0.6ms)[0m  [1m[34mSELECT "pets".* FROM "pets"[0m
+  ↳ app/views/pets/index.html.erb:3
+  Rendered pets/index.html.erb within layouts/application (Duration: 12.8ms | Allocations: 5922)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 27ms (Views: 22.3ms | ActiveRecord: 2.2ms | Allocations: 9860)
+
+
+Started GET "/octopi" for ::1 at 2020-09-15 17:36:06 -0400
+Processing by PetsController#index as HTML
+  Parameters: {"species"=>"octopi"}
+  [1m[36mPet Load (0.4ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."species" = ?[0m  [["species", "Octop"]]
+  ↳ app/controllers/pets_controller.rb:15:in `index'
+  Rendering pets/index.html.erb within layouts/application
+  [1m[36mPet Load (0.3ms)[0m  [1m[34mSELECT "pets".* FROM "pets"[0m
+  ↳ app/views/pets/index.html.erb:3
+  Rendered pets/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 932)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 11.6ms | ActiveRecord: 0.7ms | Allocations: 5036)
+
+
+Started GET "/uiregqouiqegr" for ::1 at 2020-09-15 17:36:11 -0400
+Processing by PetsController#index as HTML
+  Parameters: {"species"=>"uiregqouiqegr"}
+  [1m[36mPet Load (0.2ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."species" = ?[0m  [["species", "Uiregqouiqeg"]]
+  ↳ app/controllers/pets_controller.rb:15:in `index'
+  Rendering pets/index.html.erb within layouts/application
+  [1m[36mPet Load (0.3ms)[0m  [1m[34mSELECT "pets".* FROM "pets"[0m
+  ↳ app/views/pets/index.html.erb:3
+  Rendered pets/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 932)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 13.8ms | ActiveRecord: 0.5ms | Allocations: 4970)
+
+
+Started GET "/pets/11" for ::1 at 2020-09-15 17:36:15 -0400
+Processing by PetsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mPet Load (0.3ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/pets_controller.rb:25:in `show'
+  Rendering pets/show.html.erb within layouts/application
+  Rendered pets/show.html.erb within layouts/application (Duration: 1.0ms | Allocations: 175)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 9.0ms | ActiveRecord: 0.3ms | Allocations: 4373)
+
+
+Started GET "/pets" for ::1 at 2020-09-15 17:36:20 -0400
+Processing by PetsController#index as HTML
+  Parameters: {"species"=>"pets"}
+  Rendering pets/index.html.erb within layouts/application
+  [1m[36mPet Load (0.3ms)[0m  [1m[34mSELECT "pets".* FROM "pets"[0m
+  ↳ app/views/pets/index.html.erb:3
+  Rendered pets/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 937)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 12.7ms | ActiveRecord: 0.3ms | Allocations: 4331)
+
+
+Started GET "/cats" for ::1 at 2020-09-15 17:36:23 -0400
+Processing by PetsController#index as HTML
+  Parameters: {"species"=>"cats"}
+  [1m[36mPet Load (0.3ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."species" = ?[0m  [["species", "Cat"]]
+  ↳ app/controllers/pets_controller.rb:15:in `index'
+  Rendering pets/index.html.erb within layouts/application
+  Rendered pets/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 113)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 10.1ms | ActiveRecord: 0.3ms | Allocations: 4150)
+
+
+Started GET "/pets/13" for ::1 at 2020-09-15 17:36:25 -0400
+Processing by PetsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mPet Load (0.4ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/pets_controller.rb:25:in `show'
+  Rendering pets/show.html.erb within layouts/application
+  Rendered pets/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 18)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 12.1ms | ActiveRecord: 0.4ms | Allocations: 4009)
+
+
+Started GET "/pets/13" for ::1 at 2020-09-15 17:36:32 -0400
+Processing by PetsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mPet Load (0.4ms)[0m  [1m[34mSELECT "pets".* FROM "pets" WHERE "pets"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/pets_controller.rb:25:in `show'
+  Rendering pets/show.html.erb within layouts/application
+  Rendered pets/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 18)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 9.2ms | ActiveRecord: 0.4ms | Allocations: 3961)
+
+
