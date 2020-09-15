@@ -47,3 +47,5 @@ class PetsController < ApplicationController
     # end
 
 end
+
+/\b?sort_by=.*\b/
